@@ -32,6 +32,7 @@
                                 <state key="normal" title="My Account"/>
                                 <connections>
                                     <action selector="myAccountButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="S0t-BA-uZT"/>
+                                    <segue destination="lyc-Za-XSK" kind="show" identifier="showMyAccount" id="39F-7d-sWD"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -43,10 +44,10 @@
             </objects>
             <point key="canvasLocation" x="-433.33333333333337" y="62.771739130434788"/>
         </scene>
-        <!--View Controller-->
+        <!--My Account View Controller-->
         <scene sceneID="aYG-Zy-YC9">
             <objects>
-                <viewController id="lyc-Za-XSK" sceneMemberID="viewController">
+                <viewController id="lyc-Za-XSK" customClass="MyAccountViewController" customModule="MAGBankDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0WN-he-Fs5">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

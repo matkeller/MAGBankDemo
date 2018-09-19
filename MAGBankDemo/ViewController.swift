@@ -30,6 +30,8 @@ class ViewController: UIViewController {
         }
     }
 
+    
+    
     @IBAction func myAccountButton(_ sender: Any) {
         
         print ("My Account button pressed")
@@ -48,12 +50,16 @@ class ViewController: UIViewController {
                 let message = resultJSON["message"].stringValue
                 let data = ("Message: \(message)")
                 print (data)
+                
+                //We are logged in, segue to My Account
+                self.performSegue(withIdentifier: "showMyAccount", sender: self)
             } else {
                 print ("Error with login: \(error!)")
             }
         })
     }
-    
 
+    
+    
 }
 
