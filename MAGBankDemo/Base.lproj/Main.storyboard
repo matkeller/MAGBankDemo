@@ -35,6 +35,10 @@
                                     <segue destination="lyc-Za-XSK" kind="show" identifier="showMyAccount" id="39F-7d-sWD"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="Nel-BM-3nc">
+                                <rect key="frame" x="20" y="307" width="374" height="224"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -208,4 +212,7 @@
             <point key="canvasLocation" x="380" y="64"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="logo" width="682" height="458"/>
+    </resources>
 </document>
