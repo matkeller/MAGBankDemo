@@ -12,6 +12,7 @@
 		50357C2C2152ED6600FB8DFB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50357C2A2152ED6600FB8DFB /* Main.storyboard */; };
 		50357C2E2152ED6600FB8DFB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50357C2D2152ED6600FB8DFB /* Assets.xcassets */; };
 		50357C312152ED6600FB8DFB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50357C2F2152ED6600FB8DFB /* LaunchScreen.storyboard */; };
+		507B33BB2152F38500A617C0 /* msso_config.json in Resources */ = {isa = PBXBuildFile; fileRef = 507B33BA2152F38500A617C0 /* msso_config.json */; };
 		F63156ECCE0FDCE87B5A870F /* Pods_MAGBankDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC589C452A38FEFF2AB0F75C /* Pods_MAGBankDemo.framework */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +24,7 @@
 		50357C2D2152ED6600FB8DFB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		50357C302152ED6600FB8DFB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		50357C322152ED6600FB8DFB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		507B33BA2152F38500A617C0 /* msso_config.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = msso_config.json; sourceTree = "<group>"; };
 		BC589C452A38FEFF2AB0F75C /* Pods_MAGBankDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MAGBankDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5D39EAD932F87DBFDB35BCE /* Pods-MAGBankDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MAGBankDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MAGBankDemo/Pods-MAGBankDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		E0F388AD93291FE4A5350442 /* Pods-MAGBankDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MAGBankDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-MAGBankDemo/Pods-MAGBankDemo.release.xcconfig"; sourceTree = "<group>"; };
@@ -67,6 +69,7 @@
 				50357C2D2152ED6600FB8DFB /* Assets.xcassets */,
 				50357C2F2152ED6600FB8DFB /* LaunchScreen.storyboard */,
 				50357C322152ED6600FB8DFB /* Info.plist */,
+				507B33BA2152F38500A617C0 /* msso_config.json */,
 			);
 			path = MAGBankDemo;
 			sourceTree = "<group>";
@@ -151,6 +154,7 @@
 				50357C312152ED6600FB8DFB /* LaunchScreen.storyboard in Resources */,
 				50357C2E2152ED6600FB8DFB /* Assets.xcassets in Resources */,
 				50357C2C2152ED6600FB8DFB /* Main.storyboard in Resources */,
+				507B33BB2152F38500A617C0 /* msso_config.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -161,8 +165,6 @@
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			inputFileListPaths = (
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-MAGBankDemo/Pods-MAGBankDemo-frameworks.sh",
@@ -175,8 +177,6 @@
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MASConnecta.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MASFoundation.framework",
@@ -196,15 +196,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-MAGBankDemo-checkManifestLockResult.txt",
 			);
