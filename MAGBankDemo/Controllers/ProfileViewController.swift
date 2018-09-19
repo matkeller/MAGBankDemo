@@ -7,6 +7,9 @@
 //
 
 import UIKit
+import MASFoundation
+import SVProgressHUD
+import SwiftyJSON
 
 class ProfileViewController: UIViewController {
 

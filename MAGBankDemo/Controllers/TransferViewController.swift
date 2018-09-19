@@ -7,6 +7,9 @@
 //
 
 import UIKit
+import MASFoundation
+import SVProgressHUD
+import SwiftyJSON
 
 class TransferViewController: UIViewController {
 
@@ -14,6 +17,29 @@ class TransferViewController: UIViewController {
         super.viewDidLoad()
 
         print ("Transfer view controller did load")
+        MAS.getFrom("/transfer", withParameters: nil, andHeaders: nil, completion: { (response, error) in
+            
+            if (error == nil) {
+                
+                //We have data!
+                SVProgressHUD.dismiss()
+                print("Response: \(response!["MASResponseInfoBodyInfoKey"]!) ")
+                
+                //Parse JSON
+                print("Try to parse JSON...")
+                let resultJSON : JSON = JSON(response!["MASResponseInfoBodyInfoKey"]!)
+                let message = resultJSON["message"].stringValue
+                
+                /////// TODO Create and update label
+                ///////self.messageLabel.text = message
+                
+                //self.resultTextView.text = response?.debugDescription
+                
+            } else {
+                print ("Error \(error!)")
+            }
+        })
+        
     }
 
     override func didReceiveMemoryWarning() {

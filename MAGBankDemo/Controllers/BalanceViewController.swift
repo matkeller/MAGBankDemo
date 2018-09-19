@@ -7,29 +7,43 @@
 //
 
 import UIKit
+import MASFoundation
+import SVProgressHUD
+import SwiftyJSON
 
 class BalanceViewController: UIViewController {
 
+    @IBOutlet weak var balanceLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         print ("Balance view controller did load")
+        
+        MAS.getFrom("/balance", withParameters: nil, andHeaders: nil, completion: { (response, error) in
+            
+            if (error == nil) {
+                
+                //We have data!
+                SVProgressHUD.dismiss()
+                print("Response: \(response!["MASResponseInfoBodyInfoKey"]!) ")
+                
+                //Parse JSON
+                print("Try to parse JSON...")
+                let resultJSON : JSON = JSON(response!["MASResponseInfoBodyInfoKey"]!)
+                let balance = resultJSON["balance"].stringValue
+                
+                let data = ("$\(balance)")
+                print (data)
+                self.balanceLabel.text = data
+                
+                //self.resultTextView.text = response?.debugDescription
+                
+            } else {
+                print ("Error \(error!)")
+            }
+        })
+        
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
