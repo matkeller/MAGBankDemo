@@ -1,5 +1,5 @@
 //
-//  MyAccountViewController.swift
+//  BalanceViewController.swift
 //  MAGBankDemo
 //
 //  Created by Matthew Keller on 9/19/18.
@@ -8,12 +8,12 @@
 
 import UIKit
 
-class MyAccountViewController: UIViewController {
+class BalanceViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        print ("My Account view controller did load")
+        print ("Balance view controller did load")
     }
 
     override func didReceiveMemoryWarning() {

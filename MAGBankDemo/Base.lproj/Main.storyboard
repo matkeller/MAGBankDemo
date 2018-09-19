@@ -32,7 +32,7 @@
                                 <state key="normal" title="My Account"/>
                                 <connections>
                                     <action selector="myAccountButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="S0t-BA-uZT"/>
-                                    <segue destination="lyc-Za-XSK" kind="show" identifier="showMyAccount" id="39F-7d-sWD"/>
+                                    <segue destination="1bV-UJ-pVJ" kind="show" identifier="showMyAccount" id="39F-7d-sWD"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -44,10 +44,10 @@
             </objects>
             <point key="canvasLocation" x="-433.33333333333337" y="62.771739130434788"/>
         </scene>
-        <!--View Controller-->
+        <!--Balance View Controller-->
         <scene sceneID="ZEa-bN-Fnd">
             <objects>
-                <viewController id="8RO-bY-gAh" sceneMemberID="viewController">
+                <viewController id="8RO-bY-gAh" customClass="BalanceViewController" customModule="MAGBankDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UOc-bP-yzm">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -68,10 +68,10 @@
             </objects>
             <point key="canvasLocation" x="-443" y="802"/>
         </scene>
-        <!--View Controller-->
+        <!--Profile View Controller-->
         <scene sceneID="jJe-xW-xUU">
             <objects>
-                <viewController id="HeW-4Q-E0m" sceneMemberID="viewController">
+                <viewController id="HeW-4Q-E0m" customClass="ProfileViewController" customModule="MAGBankDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4k4-Ko-ezH">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -92,10 +92,10 @@
             </objects>
             <point key="canvasLocation" x="336" y="803"/>
         </scene>
-        <!--View Controller-->
+        <!--Transfer View Controller-->
         <scene sceneID="ekV-il-cxs">
             <objects>
-                <viewController id="KyU-cw-Vtd" sceneMemberID="viewController">
+                <viewController id="KyU-cw-Vtd" customClass="TransferViewController" customModule="MAGBankDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XS6-HI-hor">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -202,10 +202,36 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="3fV-V8-dWk"/>
                     </view>
+                    <navigationItem key="navigationItem" id="Xeg-uo-VhE">
+                        <barButtonItem key="rightBarButtonItem" title="Logout" id="80v-EK-XPb">
+                            <connections>
+                                <action selector="logoutButton:" destination="lyc-Za-XSK" id="Myi-7N-QHt"/>
+                                <segue destination="BYZ-38-t0r" kind="show" identifier="logout" id="Wjv-81-CdP"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yxa-Ao-cpR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="380" y="64"/>
+            <point key="canvasLocation" x="1286.9565217391305" y="63.586956521739133"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="VGn-Qt-D7b">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1bV-UJ-pVJ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="wV0-73-R0J">
+                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="lyc-Za-XSK" kind="relationship" relationship="rootViewController" id="xqq-kZ-YLM"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sav-NI-I8x" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="379.71014492753625" y="63.586956521739133"/>
         </scene>
     </scenes>
 </document>

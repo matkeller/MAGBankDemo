@@ -14,6 +14,9 @@
 		50357C312152ED6600FB8DFB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50357C2F2152ED6600FB8DFB /* LaunchScreen.storyboard */; };
 		507B33BB2152F38500A617C0 /* msso_config.json in Resources */ = {isa = PBXBuildFile; fileRef = 507B33BA2152F38500A617C0 /* msso_config.json */; };
 		507B33BD2152F72F00A617C0 /* MyAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 507B33BC2152F72F00A617C0 /* MyAccountViewController.swift */; };
+		507B33C121530DC400A617C0 /* BalanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 507B33C021530DC400A617C0 /* BalanceViewController.swift */; };
+		507B33C321530E6300A617C0 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 507B33C221530E6300A617C0 /* ProfileViewController.swift */; };
+		507B33C521530E9800A617C0 /* TransferViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 507B33C421530E9800A617C0 /* TransferViewController.swift */; };
 		F63156ECCE0FDCE87B5A870F /* Pods_MAGBankDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC589C452A38FEFF2AB0F75C /* Pods_MAGBankDemo.framework */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +30,9 @@
 		50357C322152ED6600FB8DFB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		507B33BA2152F38500A617C0 /* msso_config.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = msso_config.json; sourceTree = "<group>"; };
 		507B33BC2152F72F00A617C0 /* MyAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAccountViewController.swift; sourceTree = "<group>"; };
+		507B33C021530DC400A617C0 /* BalanceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceViewController.swift; sourceTree = "<group>"; };
+		507B33C221530E6300A617C0 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		507B33C421530E9800A617C0 /* TransferViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferViewController.swift; sourceTree = "<group>"; };
 		BC589C452A38FEFF2AB0F75C /* Pods_MAGBankDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MAGBankDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5D39EAD932F87DBFDB35BCE /* Pods-MAGBankDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MAGBankDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MAGBankDemo/Pods-MAGBankDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		E0F388AD93291FE4A5350442 /* Pods-MAGBankDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MAGBankDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-MAGBankDemo/Pods-MAGBankDemo.release.xcconfig"; sourceTree = "<group>"; };
@@ -66,15 +72,26 @@
 			isa = PBXGroup;
 			children = (
 				50357C2A2152ED6600FB8DFB /* Main.storyboard */,
-				50357C262152ED6600FB8DFB /* AppDelegate.swift */,
-				50357C282152ED6600FB8DFB /* ViewController.swift */,
-				507B33BC2152F72F00A617C0 /* MyAccountViewController.swift */,
+				507B33C621530F1C00A617C0 /* Controllers */,
 				50357C2D2152ED6600FB8DFB /* Assets.xcassets */,
 				50357C2F2152ED6600FB8DFB /* LaunchScreen.storyboard */,
 				50357C322152ED6600FB8DFB /* Info.plist */,
+				50357C262152ED6600FB8DFB /* AppDelegate.swift */,
 				507B33BA2152F38500A617C0 /* msso_config.json */,
 			);
 			path = MAGBankDemo;
+			sourceTree = "<group>";
+		};
+		507B33C621530F1C00A617C0 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				50357C282152ED6600FB8DFB /* ViewController.swift */,
+				507B33BC2152F72F00A617C0 /* MyAccountViewController.swift */,
+				507B33C221530E6300A617C0 /* ProfileViewController.swift */,
+				507B33C421530E9800A617C0 /* TransferViewController.swift */,
+				507B33C021530DC400A617C0 /* BalanceViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		A5529FF0F20E89E5481CA525 /* Frameworks */ = {
@@ -220,8 +237,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				50357C292152ED6600FB8DFB /* ViewController.swift in Sources */,
+				507B33C521530E9800A617C0 /* TransferViewController.swift in Sources */,
 				50357C272152ED6600FB8DFB /* AppDelegate.swift in Sources */,
+				507B33C321530E6300A617C0 /* ProfileViewController.swift in Sources */,
 				507B33BD2152F72F00A617C0 /* MyAccountViewController.swift in Sources */,
+				507B33C121530DC400A617C0 /* BalanceViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
