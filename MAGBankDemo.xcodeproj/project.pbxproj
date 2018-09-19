@@ -12,6 +12,7 @@
 		50357C2C2152ED6600FB8DFB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50357C2A2152ED6600FB8DFB /* Main.storyboard */; };
 		50357C2E2152ED6600FB8DFB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50357C2D2152ED6600FB8DFB /* Assets.xcassets */; };
 		50357C312152ED6600FB8DFB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50357C2F2152ED6600FB8DFB /* LaunchScreen.storyboard */; };
+		F63156ECCE0FDCE87B5A870F /* Pods_MAGBankDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC589C452A38FEFF2AB0F75C /* Pods_MAGBankDemo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,9 @@
 		50357C2D2152ED6600FB8DFB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		50357C302152ED6600FB8DFB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		50357C322152ED6600FB8DFB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BC589C452A38FEFF2AB0F75C /* Pods_MAGBankDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MAGBankDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D5D39EAD932F87DBFDB35BCE /* Pods-MAGBankDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MAGBankDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MAGBankDemo/Pods-MAGBankDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		E0F388AD93291FE4A5350442 /* Pods-MAGBankDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MAGBankDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-MAGBankDemo/Pods-MAGBankDemo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F63156ECCE0FDCE87B5A870F /* Pods_MAGBankDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +45,8 @@
 			children = (
 				50357C252152ED6600FB8DFB /* MAGBankDemo */,
 				50357C242152ED6500FB8DFB /* Products */,
+				E88ED76D27444AFE9B123417 /* Pods */,
+				A5529FF0F20E89E5481CA525 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +71,23 @@
 			path = MAGBankDemo;
 			sourceTree = "<group>";
 		};
+		A5529FF0F20E89E5481CA525 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BC589C452A38FEFF2AB0F75C /* Pods_MAGBankDemo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E88ED76D27444AFE9B123417 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D5D39EAD932F87DBFDB35BCE /* Pods-MAGBankDemo.debug.xcconfig */,
+				E0F388AD93291FE4A5350442 /* Pods-MAGBankDemo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +95,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 50357C352152ED6600FB8DFB /* Build configuration list for PBXNativeTarget "MAGBankDemo" */;
 			buildPhases = (
+				AE02248CAED86326ADD535BB /* [CP] Check Pods Manifest.lock */,
 				50357C1F2152ED6500FB8DFB /* Sources */,
 				50357C202152ED6500FB8DFB /* Frameworks */,
 				50357C212152ED6500FB8DFB /* Resources */,
+				6E5ACECAA2855CE60E213EAD /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -129,6 +155,65 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6E5ACECAA2855CE60E213EAD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-MAGBankDemo/Pods-MAGBankDemo-frameworks.sh",
+				"${PODS_ROOT}/MASConnecta/MASConnecta.framework",
+				"${PODS_ROOT}/MASFoundation/MASFoundation.framework",
+				"${PODS_ROOT}/MASIdentityManagement/MASIdentityManagement.framework",
+				"${PODS_ROOT}/MASStorage/MASStorage.framework",
+				"${PODS_ROOT}/MASUI/MASUI.framework",
+				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MASConnecta.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MASFoundation.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MASIdentityManagement.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MASStorage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MASUI.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MAGBankDemo/Pods-MAGBankDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AE02248CAED86326ADD535BB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MAGBankDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		50357C1F2152ED6500FB8DFB /* Sources */ = {
@@ -278,6 +363,7 @@
 		};
 		50357C362152ED6600FB8DFB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D5D39EAD932F87DBFDB35BCE /* Pods-MAGBankDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -296,6 +382,7 @@
 		};
 		50357C372152ED6600FB8DFB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E0F388AD93291FE4A5350442 /* Pods-MAGBankDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
