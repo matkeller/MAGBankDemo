@@ -1,5 +1,5 @@
 //
-//  MyAccountViewController.swift
+//  ProfileViewController.swift
 //  MAGBankDemo
 //
 //  Created by Matthew Keller on 9/19/18.
@@ -7,13 +7,16 @@
 //
 
 import UIKit
+import MASFoundation
+import SVProgressHUD
+import SwiftyJSON
 
-class MyAccountViewController: UIViewController {
+class ProfileViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        print ("My Account view controller did load")
+       print ("Profile view controller did load")
     }
 
     override func didReceiveMemoryWarning() {
