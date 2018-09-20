@@ -12,7 +12,10 @@ import SVProgressHUD
 import SwiftyJSON
 
 class TransferViewController: UIViewController {
-
+    @IBOutlet weak var transferMessage: UILabel!
+    @IBOutlet weak var usernameField: UITextField!
+    @IBOutlet weak var amountField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -42,20 +45,11 @@ class TransferViewController: UIViewController {
         
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBAction func transferButton(_ sender: Any) {
+        print ("tranferButton pressed")
+        print ("Sent to: \(usernameField.text)")
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
+    
 
 }
