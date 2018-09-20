@@ -38,7 +38,7 @@ class TransferViewController: UIViewController {
         
         //Make call to transfer with username and amount as headers
         SVProgressHUD.show(withStatus: "Performing Transfer")
-        MAS.getFrom("/transfer", withParameters: nil, andHeaders: headers, completion: { (response, error) in
+        MAS.getFrom("/otpProtect", withParameters: nil, andHeaders: headers, completion: { (response, error) in
             
             if (error == nil) {
                 
@@ -60,6 +60,7 @@ class TransferViewController: UIViewController {
                 
             } else {
                 print ("Error \(error!)")
+                SVProgressHUD.dismiss()
                 let alertController = UIAlertController(title: "Error", message: "Transfer could not be sent, please try again later.", preferredStyle: .alert)
                 let defaultAction = UIAlertAction(title: "OK", style: .default, handler: nil)
                 alertController.addAction(defaultAction)
