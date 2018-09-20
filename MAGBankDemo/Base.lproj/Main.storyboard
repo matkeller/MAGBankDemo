@@ -35,9 +35,9 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iAO-JR-4Wi">
-                                <rect key="frame" x="279" y="80" width="108" height="40"/>
+                                <rect key="frame" x="153" y="86" width="108" height="40"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="qiS-21-Zt6"/>
+                                    <constraint firstAttribute="height" constant="40" id="BW4-lp-mkX"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
                                 <state key="normal" title="My Account"/>
@@ -49,15 +49,15 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Taq-zi-a6l" firstAttribute="top" secondItem="s4h-AR-cQU" secondAttribute="bottom" constant="25" id="3jv-Zb-xPo"/>
-                            <constraint firstItem="Nel-BM-3nc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="6kj-vU-up4"/>
-                            <constraint firstItem="s4h-AR-cQU" firstAttribute="top" secondItem="Nel-BM-3nc" secondAttribute="bottom" constant="55" id="AXK-qW-9oQ"/>
-                            <constraint firstItem="Nel-BM-3nc" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="cez-Ta-yVH"/>
-                            <constraint firstItem="iAO-JR-4Wi" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="cp3-in-p0N"/>
-                            <constraint firstItem="iAO-JR-4Wi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="279" id="iDs-1E-2oE"/>
-                            <constraint firstItem="Nel-BM-3nc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="nex-Es-7rf"/>
-                            <constraint firstItem="Nel-BM-3nc" firstAttribute="centerX" secondItem="s4h-AR-cQU" secondAttribute="centerX" id="p0i-JJ-y5n"/>
-                            <constraint firstItem="s4h-AR-cQU" firstAttribute="centerX" secondItem="Taq-zi-a6l" secondAttribute="centerX" id="zgN-2Y-Rsw"/>
+                            <constraint firstItem="iAO-JR-4Wi" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="22" id="733-be-hHY"/>
+                            <constraint firstItem="Nel-BM-3nc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Afu-ZC-OVB"/>
+                            <constraint firstItem="s4h-AR-cQU" firstAttribute="top" secondItem="Nel-BM-3nc" secondAttribute="bottom" constant="55" id="Eai-nP-cKk"/>
+                            <constraint firstItem="Taq-zi-a6l" firstAttribute="top" secondItem="s4h-AR-cQU" secondAttribute="bottom" constant="25" id="Nq3-T6-2FF"/>
+                            <constraint firstItem="iAO-JR-4Wi" firstAttribute="centerX" secondItem="s4h-AR-cQU" secondAttribute="centerX" id="Ypv-Xt-wGs"/>
+                            <constraint firstItem="Nel-BM-3nc" firstAttribute="centerX" secondItem="iAO-JR-4Wi" secondAttribute="centerX" id="bWc-aP-iCM"/>
+                            <constraint firstItem="Nel-BM-3nc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="j1P-uo-kJd"/>
+                            <constraint firstItem="s4h-AR-cQU" firstAttribute="centerX" secondItem="Taq-zi-a6l" secondAttribute="centerX" id="jnU-51-4hq"/>
+                            <constraint firstItem="Nel-BM-3nc" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="pd7-9r-Jjh"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
