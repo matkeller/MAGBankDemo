@@ -28,9 +28,12 @@ class ProfileViewController: UIViewController {
                 //We have data!
                 SVProgressHUD.dismiss()
                 
-                var profile = "User profile: \n"
-                profile += "Username: "
+                var profile = "Username: "
                 profile += (MASUser.current()?.userName)!
+                profile += "\nFamily name: "
+                profile += (MASUser.current()?.familyName)!
+                profile += "\nGiven name: "
+                profile += (MASUser.current()?.givenName)!
                 profile += "\nEmail: "
                 profile += (MASUser.current()?.emailAddresses!["work"])!
                 profile += "\nPhone: "
