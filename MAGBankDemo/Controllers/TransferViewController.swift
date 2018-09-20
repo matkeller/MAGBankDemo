@@ -19,6 +19,7 @@ class TransferViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        SVProgressHUD.show(withStatus: "Performing Transfer")
         print ("Transfer view controller did load")
         MAS.getFrom("/transfer", withParameters: nil, andHeaders: nil, completion: { (response, error) in
             

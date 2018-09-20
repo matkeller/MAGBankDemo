@@ -63,6 +63,7 @@ class ViewController: UIViewController {
         
         print ("My Account button pressed")
         
+        SVProgressHUD.show(withStatus: "Performing Login")
         MAS.getFrom("/maglogin", withParameters: nil, andHeaders: nil, completion: { (response, error) in
             
             if (error == nil) {

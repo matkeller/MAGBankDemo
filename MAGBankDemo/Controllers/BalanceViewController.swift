@@ -20,6 +20,7 @@ class BalanceViewController: UIViewController {
 
         print ("Balance view controller did load")
         
+        SVProgressHUD.show(withStatus: "Retrieving Balance")
         MAS.getFrom("/balance", withParameters: nil, andHeaders: nil, completion: { (response, error) in
             
             if (error == nil) {
