@@ -8,6 +8,7 @@
 
 import UIKit
 import MASFoundation
+import MASUI
 import SVProgressHUD
 import SwiftyJSON
 
@@ -21,7 +22,30 @@ class TransferViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
+        // Configure to handle OTP by custom UI if MASUI library is included
+        // Place this line of code in AppDelegate or in your app's initialization
+        MAS.setWillHandleAuthentication(true)
+
+        // OTP Channel selection block is invoked when SDK needs
+        MAS.setOTPChannelSelectionBlock { (supportedOTPChannels, otpGenerationBlock) in
+            // Select the channel
+            let selectedChannel = supportedOTPChannels[0]
+            otpGenerationBlock([selectedChannel], false, { (completed, error) in
+                // Handle result of channel selection
+            })
+        }
+
+        // OTP credential block is invoked when SDK needs
+        MAS.setOTPCredentialsBlock { (otpBlock, error) in
+            // Create UI to retrieve OTP credential from the user
+            let otpCredentials = "...user input..."
+            
+            otpBlock(otpCredentials, false, {(completed, error) in
+                // Handle result of OTP credential
+            })
+        }
+
     }
 
     
