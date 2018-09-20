@@ -16,12 +16,29 @@ class TransferViewController: UIViewController {
     @IBOutlet weak var usernameField: UITextField!
     @IBOutlet weak var amountField: UITextField!
     
+    var username = ""
+    var amount = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+    }
 
+    
+    
+    
+    @IBAction func transferButton(_ sender: Any) {
+        print ("tranferButton pressed")
+        
+        //TODO  Ensure not empty or nil
+        username = usernameField.text!
+        amount = amountField.text!
+        let headers = ["username":username, "amount":amount]
+        print ("Attempting to transfer $\(amount) to \(username)")
+        
+        //Make call to transfer with username and amount as headers
         SVProgressHUD.show(withStatus: "Performing Transfer")
-        print ("Transfer view controller did load")
-        MAS.getFrom("/transfer", withParameters: nil, andHeaders: nil, completion: { (response, error) in
+        MAS.getFrom("/transfer", withParameters: nil, andHeaders: headers, completion: { (response, error) in
             
             if (error == nil) {
                 
@@ -30,25 +47,25 @@ class TransferViewController: UIViewController {
                 print("Response: \(response!["MASResponseInfoBodyInfoKey"]!) ")
                 
                 //Parse JSON
-                print("Try to parse JSON...")
-                let resultJSON : JSON = JSON(response!["MASResponseInfoBodyInfoKey"]!)
-                let message = resultJSON["message"].stringValue
-                
-                /////// TODO Create and update label
-                ///////self.messageLabel.text = message
-                
-                //self.resultTextView.text = response?.debugDescription
+//                print("Try to parse JSON...")
+//                let resultJSON : JSON = JSON(response!["MASResponseInfoBodyInfoKey"]!)
+//                let message = resultJSON["message"].stringValue
+//
+                let alertController = UIAlertController(title: "Success!", message: "$\(self.amount)  transferred to \(self.username)", preferredStyle: .alert)
+                let defaultAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+                self.usernameField.text = ""
+                self.amountField.text = ""
+                alertController.addAction(defaultAction)
+                self.present(alertController, animated: true, completion: nil)
                 
             } else {
                 print ("Error \(error!)")
+                let alertController = UIAlertController(title: "Error", message: "Transfer could not be sent, please try again later.", preferredStyle: .alert)
+                let defaultAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+                alertController.addAction(defaultAction)
+                self.present(alertController, animated: true, completion: nil)
             }
         })
-        
-    }
-
-    @IBAction func transferButton(_ sender: Any) {
-        print ("tranferButton pressed")
-        print ("Sent to: \(usernameField.text)")
     }
     
     

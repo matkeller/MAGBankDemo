@@ -28,7 +28,7 @@ class ViewController: UIViewController {
                         let alertController = UIAlertController(title: "Error", message: "The user could not be logged out", preferredStyle: .alert)
                         let defaultAction = UIAlertAction(title: "OK", style: .default, handler: nil)
                         alertController.addAction(defaultAction)
-                        
+                        self.present(alertController, animated: true, completion: nil)
                     } else {
                         print("User logout was successful")
                         //Present an Alert showing the results
