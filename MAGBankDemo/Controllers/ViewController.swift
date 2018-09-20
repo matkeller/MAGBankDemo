@@ -17,6 +17,33 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //Logout any old session if it exists
+        if (MASUser.current() != nil) {
+            if (MASUser.current()!.isAuthenticated) {
+                MASUser.current()?.logout(false, completion: { (completed, error) in
+                    
+                    if (error != nil) {
+                        print("Error trying to logout the user")
+                        //Present an Alert showing the results
+                        let alertController = UIAlertController(title: "Error", message: "The user could not be logged out", preferredStyle: .alert)
+                        let defaultAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+                        alertController.addAction(defaultAction)
+                        
+                    } else {
+                        print("User logout was successful")
+                        //Present an Alert showing the results
+                        let alertController = UIAlertController(title: "User Logout", message: "The user has been logged out!", preferredStyle: .alert)
+                        let defaultAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+                        alertController.addAction(defaultAction)
+                        self.present(alertController, animated: true, completion: nil)
+            
+                    }
+                })
+            } else {
+                print ("Trying to logout but user was not authenticated")
+            }
+        }
+        
         //Start MAS
         MAS.setGrantFlow(MASGrantFlow.password)
         MAS.start(withDefaultConfiguration: true) { (completed, error) in
