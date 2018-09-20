@@ -19,19 +19,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MAG Bank Demo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H3B-dl-fvd">
-                                <rect key="frame" x="110" y="116" width="195" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="E9X-3h-acI"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="25"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="Nel-BM-3nc">
+                                <rect key="frame" x="20" y="64" width="374" height="458"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mortgage rates as low as 3.5%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s4h-AR-cQU">
+                                <rect key="frame" x="90" y="577" width="235" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Free checking with new accounts" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Taq-zi-a6l">
+                                <rect key="frame" x="80" y="623" width="255" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iAO-JR-4Wi">
-                                <rect key="frame" x="153" y="186" width="108" height="40"/>
+                                <rect key="frame" x="279" y="80" width="108" height="40"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="k3S-41-akK"/>
+                                    <constraint firstAttribute="height" constant="40" id="qiS-21-Zt6"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
                                 <state key="normal" title="My Account"/>
@@ -40,20 +46,18 @@
                                     <segue destination="1bV-UJ-pVJ" kind="show" identifier="showMyAccount" id="39F-7d-sWD"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="Nel-BM-3nc">
-                                <rect key="frame" x="20" y="307" width="374" height="224"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Nel-BM-3nc" secondAttribute="bottom" constant="205" id="42a-2y-n6Q"/>
-                            <constraint firstItem="H3B-dl-fvd" firstAttribute="centerX" secondItem="iAO-JR-4Wi" secondAttribute="centerX" id="9zH-lX-iBw"/>
-                            <constraint firstItem="H3B-dl-fvd" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="52" id="DIN-X1-n0U"/>
-                            <constraint firstItem="iAO-JR-4Wi" firstAttribute="top" secondItem="H3B-dl-fvd" secondAttribute="bottom" constant="40" id="Flh-Gi-CAU"/>
-                            <constraint firstItem="Nel-BM-3nc" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="b6t-p2-IP8"/>
-                            <constraint firstItem="iAO-JR-4Wi" firstAttribute="centerX" secondItem="Nel-BM-3nc" secondAttribute="centerX" id="fm1-YC-HdA"/>
-                            <constraint firstItem="Nel-BM-3nc" firstAttribute="top" secondItem="iAO-JR-4Wi" secondAttribute="bottom" constant="81" id="iGm-ig-z9c"/>
-                            <constraint firstItem="Nel-BM-3nc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="qpG-Vh-ZCg"/>
+                            <constraint firstItem="Taq-zi-a6l" firstAttribute="top" secondItem="s4h-AR-cQU" secondAttribute="bottom" constant="25" id="3jv-Zb-xPo"/>
+                            <constraint firstItem="Nel-BM-3nc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="6kj-vU-up4"/>
+                            <constraint firstItem="s4h-AR-cQU" firstAttribute="top" secondItem="Nel-BM-3nc" secondAttribute="bottom" constant="55" id="AXK-qW-9oQ"/>
+                            <constraint firstItem="Nel-BM-3nc" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="cez-Ta-yVH"/>
+                            <constraint firstItem="iAO-JR-4Wi" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="cp3-in-p0N"/>
+                            <constraint firstItem="iAO-JR-4Wi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="279" id="iDs-1E-2oE"/>
+                            <constraint firstItem="Nel-BM-3nc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="nex-Es-7rf"/>
+                            <constraint firstItem="Nel-BM-3nc" firstAttribute="centerX" secondItem="s4h-AR-cQU" secondAttribute="centerX" id="p0i-JJ-y5n"/>
+                            <constraint firstItem="s4h-AR-cQU" firstAttribute="centerX" secondItem="Taq-zi-a6l" secondAttribute="centerX" id="zgN-2Y-Rsw"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>

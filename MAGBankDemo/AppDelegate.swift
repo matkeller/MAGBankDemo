@@ -8,6 +8,7 @@
 
 import UIKit
 import MASFoundation
+import MASUI
 
 
 @UIApplicationMain
